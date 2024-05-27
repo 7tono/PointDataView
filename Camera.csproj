@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-Windows</TargetFramework>
+    <RootNamespace>Tutorial</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <aPublishSingleFile>true</aPublishSingleFile>
+    <aSelfContained>true</aSelfContained>
+    <aRuntimeIdentifier>win-x64</aRuntimeIdentifier>
+    <aPublishTrimmed>true</aPublishTrimmed>
+    <aPublishReadyToRun>true</aPublishReadyToRun>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.WindowsDesktop.App"/>
+    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.1"/>
+    <PackageReference Include="Silk.NET.Core" Version="2.4.0"/>
+    <PackageReference Include="Silk.NET.OpenGL" Version="2.4.0"/>
+    <PackageReference Include="Silk.NET.Input.Common" Version="2.4.0"/>
+    <PackageReference Include="Silk.NET.Windowing" Version="2.4.0"/>
+    <PackageReference Include="Silk.NET.Windowing.Common" Version="2.4.0"/>
+    <PackageReference Include="Silk.NET.Input" Version="2.4.0"/>
+    <PackageReference Include="Silk.NET.OpenGL.Extensions.ImGui" Version="2.4.0"/>
+    <PackageReference Include="SurfaceAnalyzer" Version="1.4.0"/>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Shader.frag">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Shader.vert">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="silk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
